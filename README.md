@@ -1,52 +1,125 @@
-# Django testing  
-## Если вы успели выполнить все домашние задания — ваш финальный проект готов.
-Перенесите тесты из ваших проектов в данный репозиторий (**django_testing**), который появился в вашем аккаунте.  
-В итоге должна получиться следующая структура репозитория:
+# Django testing
+
+## Технологии:
+
+- Python 3.9
+- Django 3.2
+- SQLite3
+- Pytest
+- Unittest
+
+## Установка (Windows):
+
+1. Клонирование репозитория
+
 ```
-Dev
- └── django_testing
-     ├── ya_news
-     │   ├── news
-     │   │   ├── fixtures/
-     │   │   ├── migrations/
-     │   │   ├── pytest_tests/   <- Директория с вашими тестами pytest для проекта ya_news
-     │   │   ├── __init__.py
-     │   │   ├── admin.py
-     │   │   ├── apps.py
-     │   │   ├── forms.py
-     │   │   ├── models.py
-     │   │   ├── urls.py
-     │   │   └── views.py
-     │   ├── templates/
-     │   ├── yanews/
-     │   ├── manage.py
-     │   └── pytest.ini
-     ├── ya_note
-     │   ├── notes
-     │   │   ├── migrations/
-     │   │   ├── tests/          <- Директория с вашими тестами unittest для проекта ya_note
-     │   │   ├── __init__.py
-     │   │   ├── admin.py
-     │   │   ├── apps.py
-     │   │   ├── forms.py
-     │   │   ├── models.py
-     │   │   ├── urls.py
-     │   │   └── views.py
-     │   ├── templates/
-     │   ├── yanote/
-     │   ├── manage.py
-     │   └── pytest.ini
-     ├── .gitignore
-     ├── README.md
-     ├── requirements.txt
-     └── structure_test.py
+git clone https://github.com/StsdevkzCode/django_testing.git
 ```
 
-## После копирования тестов, написанных в ходе прохождения спринта, для проверки готовности проекта к сдаче необходимо выполнить 4 действия:
-1. Создать и активировать виртуальное окружение; установить зависимости из файла `requirements.txt`;
-2. Запустить скрипт для `run_tests.sh` из корневой директории проекта:
-```sh
+2. Переход в директорию django_testing
+
+```
+cd django_testing
+```
+
+3. Создание виртуального окружения
+
+```
+python -m venv venv
+```
+
+4. Активация виртуального окружения
+
+```
+source venv/Scripts/activate
+```
+
+5. Обновите pip
+
+```
+python -m pip install --upgrade pip
+```
+
+6. Установка зависимостей
+
+```
+pip install -r requirements.txt
+```
+
+7. Переход в директорию ya_news
+
+```
+cd ya_news
+```
+
+8. Применение миграций
+
+```
+python manage.py migrate
+```
+
+9. Загрузить фикстуры в БД
+
+```
+python manage.py loaddata news.json
+```
+
+10. Создать суперпользователя
+
+```
+python manage.py createsuperuser
+```
+
+11. Запуск проекта, введите команду
+
+```
+python manage.py runserver
+```
+
+12. Отмена
+
+```
+Ctrl + C
+```
+
+13. Запуск тестов
+
+```
+pytest
+```
+
+14. Переход в родительский каталог
+
+```
+cd ..
+```
+
+15. Переход в директорию ya_note
+
+```
+cd ya_note
+```
+
+16. Запуск тестов
+
+```
+python manage.py test
+```
+
+17. Переход в родительский каталог
+
+```
+cd ..
+```
+
+18. Запустить скрипт для `run_tests.sh` из корневой директории проекта
+
+```
 bash run_tests.sh
 ```
 
-**Если все проверки успешно выполнились, проект можно отправлять на ревью.**
+19. Деактивация виртуального окружения
+
+```
+deactivate
+```
