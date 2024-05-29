@@ -59,12 +59,12 @@ DATABASES = {
 }
 
 
-AUTH_PASSWORD_VALIDATORS = []
+AUTH_PASSWORD_VALIDATORS = []  # type: ignore
 
 
-LANGUAGE_CODE = 'ru'
+LANGUAGE_CODE = 'ru-RU'
 
-TIME_ZONE = 'Europe/Moscow'
+TIME_ZONE = 'Asia/Almaty'
 
 USE_I18N = True
 
