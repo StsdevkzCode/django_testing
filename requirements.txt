@@ -1,5 +1,5 @@
 black==24.4.2
-django==3.2.15
+Django==3.2.25
 flake8==5.0.4
 flake8-docstrings==1.7.0
 pep8-naming==0.13.3
